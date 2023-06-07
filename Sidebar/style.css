@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --main-blue: #4aa6e8;
+  --hover-blue: #7fc6f8;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  background-color: aliceblue;
+  position: relative;
+}
+
+.aside {
+  position: absolute;
+  left:-400px;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: white;
+  max-width: 400px;
+  transition: 0.6s ease;
+}
+
+.sidebar {
+  left: 0;
+  position: inherit;
+}
+
+.i_c {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  font-size: 2rem;
+  color: var(--main-blue);
+  animation: anim 1.5s infinite;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+@keyframes anim {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.i_c:hover {
+  color: var(--hover-blue);
+}
+
+.aside_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.aside_title > h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-shadow: 2px 3px 5px;
+}
+
+.aside_title > i {
+  font-size: 1.8rem;
+  color: rgb(203, 1, 1);
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.aside_title > i:hover {
+  transform: rotate(360deg);
+  color: red;
+}
+
+.navigator {
+  list-style-type: none;
+  width: 100%;
+}
+
+.navigator > li {
+  padding: 12px 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+
+.navigator > li:hover {
+  background-color: var(--main-blue);
+  color: var(--hover-blue);
+  padding: 12px 3rem;
+}
